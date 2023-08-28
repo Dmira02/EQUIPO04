@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Sugerencias</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="relleno">
+    <h1>Solicitud de Sugerencias</h1>
+  
+    <form id="solicitud" action="https://formsubmit.co/pieroq329@gmail.com" method="POST">
+      <label for="nombre">Nombres:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+    
+      <label for="correo">Correo Electrónico:</label><br>
+      <input type="email" id="correo" name="correo" required><br><br>
+      
+      <label for="tipo-usuario">Tipo de Usuario:</label><br>
+      <select id="tipo-usuario" name="tipo-usuario">
+        <option value="cliente">Cliente</option>
+        <option value="administrador">Administrador</option>
+      </select><br><br>
+      
+      <label for="calificacion">Calificación de Experiencia:</label><br>
+      <input type="number" id="calificacion" name="calificacion" min="1" max="5" required><br><br>
+      
+      <label for="comentario">Comentario de Sugerencia:</label><br>
+      <textarea id="comentario" name="comentario" rows="4" placeholder="Ingrese su sugerencia aquí." required></textarea><br><br>
+      
+      <label for="fecha-hora">Fecha y Hora:</label><br>
+      <input type="datetime-local" id="fecha-hora" name="fecha-hora" required><br><br>
+      
+      <div class="center">
+        <button onclick="enviar()" type="submit" >Enviar Sugerencia</button><br><br>
+      </div>
+      <input type="hidden" name="_next" value="http://localhost/trabajo_final/pedido.html">
+      <input type="hidden" name="_captcha" value="false">
+    </form>
+    
+  </div>
+  
+</body>
+</html>
